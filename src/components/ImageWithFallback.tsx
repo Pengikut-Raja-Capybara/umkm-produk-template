@@ -1,4 +1,5 @@
 import type { ImgHTMLAttributes } from 'react'
+import { getAssetPath } from '../lib/assets'
 
 const FALLBACK_SRC = '/assets/placeholder.svg'
 
@@ -15,13 +16,14 @@ export function ImageWithFallback({
 }: ImageWithFallbackProps) {
   const handleError: ImgHTMLAttributes<HTMLImageElement>['onError'] = (event) => {
     const target = event.currentTarget
-    if (target.src !== fallbackSrc) {
-      target.src = fallbackSrc
+    const fallback = getAssetPath(fallbackSrc)
+    if (target.src !== fallback) {
+      target.src = fallback
     }
     if (onError) {
       onError(event)
     }
   }
 
-  return <img src={src} alt={alt ?? ''} onError={handleError} {...props} />
+  return <img src={getAssetPath(src ?? '')} alt={alt ?? ''} onError={handleError} {...props} />
 }
