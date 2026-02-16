@@ -168,9 +168,9 @@ export const site: SiteContent = {
       icon: 'tokopedia',
     },
     {
-      label: 'Instagram Shop',
-      href: 'https://instagram.com/raja.capybara',
-      icon: 'instagram',
+      label: 'TikTok Shop',
+      href: 'https://shop.tiktok.com/raj-capybara',
+      icon: 'tiktok',
     },
   ],
   flashHighlight: [

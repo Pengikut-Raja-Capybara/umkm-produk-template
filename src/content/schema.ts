@@ -1,6 +1,6 @@
 export type LayoutId = 'A' | 'B' | 'C' | 'D' | 'E'
 
-export type ThemeId = 'capybara-sand' | 'mint-stone' | 'navy-cream'
+export type ThemeId = 'capybara-sand' | 'mint-stone' | 'navy-cream' | 'terracotta-rose' | 'forest-sage' | 'charcoal-gold' | 'lavender-cream'
 
 export interface Brand {
   name: string
